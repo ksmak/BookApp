@@ -6,6 +6,7 @@ from django.conf.urls.static import static
 from books.views import (
     ListBookView,
     ListAuthorView,
+    AsyncView
 )
 
 urlpatterns = [
@@ -13,6 +14,7 @@ urlpatterns = [
     path('api-auth/', include('rest_framework.urls')),
     path('api/v1/books', ListBookView.as_view()),
     path('api/v1/authors', ListAuthorView.as_view()),
+    path('api/v1/async', AsyncView.as_view()),
 ]
 
 
